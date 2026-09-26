@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyundai i20 | Royal Motors</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #171717;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            width: 100%;
+            padding: 18px 6%;
+            background: #111;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: #ddd;
+            font-size: 14px;
+        }
+
+        .page {
+            max-width: 1200px;
+            margin: auto;
+            padding: 35px 6% 70px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #555;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .vehicle-box {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,.08);
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+        }
+
+        .photo {
+            min-height: 520px;
+            background:
+                linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.05)),
+                url("https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1400&q=85");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .info {
+            padding: 45px;
+        }
+
+        .label {
+            color: #f0a900;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: clamp(38px, 5vw, 58px);
+            line-height: 1.05;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+
+        .specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-top: 1px solid #eee;
+            border-left: 1px solid #eee;
+        }
+
+        .spec {
+            padding: 16px;
+            border-right: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .spec span {
+            display: block;
+            color: #888;
+            font-size: 12px;
+            margin-bottom: 3px;
+        }
+
+        .spec strong {
+            font-size: 15px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 20px;
+            border-radius: 7px;
+            font-weight: 700;
+        }
+
+        .call {
+            background: #111;
+            color: white;
+        }
+
+        .whatsapp {
+            background: #128c7e;
+            color: white;
+        }
+
+        .section {
+            background: white;
+            margin-top: 30px;
+            padding: 35px;
+            border-radius: 16px;
+        }
+
+        .section h2 {
+            font-size: 28px;
+            margin-bottom: 14px;
+        }
+
+        .section p {
+            color: #666;
+            max-width: 850px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 22px;
+            font-weight: 600;
+        }
+
+        .dealer {
+            background: #111;
+            color: white;
+        }
+
+        .dealer p {
+            color: #bbb;
+            margin: 8px 0;
+        }
+
+        footer {
+            padding: 25px;
+            background: #0b0b0b;
+            color: #888;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 16px 5%;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .page {
+                padding: 25px 5% 55px;
+            }
+
+            .vehicle-box {
+                grid-template-columns: 1fr;
+            }
+
+            .photo {
+                min-height: 280px;
+            }
+
+            .info {
+                padding: 25px 20px;
+            }
+
+            .price {
+                font-size: 26px;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .actions .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .section {
+                padding: 25px 20px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ROYAL MOTORS</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#vehicles">Vehicles</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<main class="page">
+
+    <a href="index.html#vehicles" class="back">← Back to Vehicles</a>
+
+    <div class="vehicle-box">
+
+        <div class="photo"></div>
+
+        <div class="info">
+
+            <div class="label">USED CAR</div>
+
+            <h1>Hyundai i20</h1>
+
+            <div class="price">₹6.25 Lakh</div>
+
+            <div class="specs">
+
+                <div class="spec">
+                    <span>Year</span>
+                    <strong>2022</strong>
+                </div>
+
+                <div class="spec">
+                    <span>Fuel</span>
+                    <strong>Petrol</strong>
+                </div>
+
+                <div class="spec">
+                    <span>KM Driven</span>
+                    <strong>32,000 km</strong>
+                </div>
+
+                <div class="spec">
+                    <span>Transmission</span>
+                    <strong>Manual</strong>
+                </div>
+
+                <div class="spec">
+                    <span>Ownership</span>
+                    <strong>1st Owner</strong>
+                </div>
+
+                <div class="spec">
+                    <span>Location</span>
+                    <strong>Hojai, Assam</strong>
+                </div>
+
+            </div>
+
+            <div class="actions">
+
+                <a href="tel:+919876543210" class="btn call">
+                    📞 Call Dealer
+                </a>
+
+                <a
+                    href="https://wa.me/918753903753?text=Hi%2C%20I%27m%20interested%20in%20the%20Hyundai%20i20%20%282022%29%20listed%20on%20your%20website.%20Is%20it%20still%20available%3F"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn whatsapp">
+                    💬 WhatsApp Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <section class="section">
+
+        <h2>Vehicle Overview</h2>
+
+        <p>
+            This Hyundai i20 is a well-maintained pre-owned vehicle
+            available at Royal Motors. Contact us for more information,
+            documents and a test drive.
+        </p>
+
+        <div class="features">
+            <div>✓ Clean condition</div>
+            <div>✓ Well maintained</div>
+            <div>✓ Documents available</div>
+            <div>✓ Test drive available</div>
+        </div>
+
+    </section>
+
+    <section class="section dealer">
+
+        <h2>About the Dealer</h2>
+
+        <p>
+            Royal Motors is a used vehicle dealer offering inspected
+            pre-owned cars and bikes at transparent prices.
+        </p>
+
+        <p>📍 Hojai, Assam</p>
+        <p>📞 +91 98765 43210</p>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Royal Motors. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
